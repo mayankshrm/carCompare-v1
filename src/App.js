@@ -1,37 +1,30 @@
-import React from "react";
-import { Card } from "./components/Card/Card";
+import { Helmet } from "react-helmet";
 import { Crousel } from "./components/Crousel/Crousel";
-import { Footer } from "./components/Footer";
-import { Header } from "./components/Header";
+import { Footer } from "./components/Partials/Footer";
+import { Header } from "./components/Partials/Header";
+import "./App.css";
 
-export function App(){
-  return(
+import { CardFinal } from "./components/Card/CardFinal";
+
+
+
+export function App() {
+ 
+  return (
     <>
+    <Helmet>
+        <style>{"body { background-color: #F5EDDC; }"}</style>
+      </Helmet>
       <Header />
       <Crousel />
-      <br/>
-      <div className="container h-100">
-
-    <div className="row">
-      <div className="col-3" >
-      <Card />
-      </div>
-      <div className="col-3">
-      <Card />
-      </div>
-      <div className="col-3">
-      <Card />
-      </div>
-      <div className="col-3">
-      <Card />
-      </div>
-    </div>
-      </div>
       <br />
 
+      <CardFinal />
+
+      <br />
+      
+
       <Footer />
-
-
     </>
-  )
+  );
 }

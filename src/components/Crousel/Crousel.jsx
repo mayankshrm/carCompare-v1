@@ -1,9 +1,11 @@
 import React from "react";
+import { StacticData } from "../StaticData/StaticData";
 import "./crousel.css";
 
 export function Crousel(){
     return(
         <>
+        <div className="container-fluid" style={{backgroundColor:"#FA9494"}}>
             <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
   <div className="carousel-inner">
     <div className="carousel-item active">
@@ -24,6 +26,12 @@ export function Crousel(){
     <span className="carousel-control-next-icon" aria-hidden="true"></span>
     <span className="visually-hidden">Next</span>
   </button>
+  <br/>
+  <div className="container">
+  <StacticData />
+
+  </div>
+</div>
 </div>
         </>
     )
